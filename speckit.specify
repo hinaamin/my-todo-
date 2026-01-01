@@ -1,0 +1,104 @@
+# Specification: Todo Console Application
+
+## Overview
+This document specifies the requirements for the Todo Console Application as part of Hackathon II: Spec-Driven Development. The application is a command-line interface (CLI) tool that allows users to manage their tasks in memory.
+
+## User Stories
+
+### 1. Add Task
+As a user, I want to add a new task to my todo list so that I can keep track of things I need to do.
+
+**Acceptance Criteria:**
+- User can provide a title for the task (required)
+- User can optionally provide a description for the task
+- System assigns a unique ID to the new task
+- Task is stored in memory with completed status set to false by default
+- System confirms successful addition of the task
+
+### 2. View Task List
+As a user, I want to view all my tasks so that I can see what I need to do.
+
+**Acceptance Criteria:**
+- System displays all tasks with their ID, title, completion status, and description
+- Tasks are displayed in a readable format with clear column headers
+- Completed tasks are visually distinguished from pending tasks
+- If no tasks exist, system indicates that the list is empty
+
+### 3. Update Task
+As a user, I want to update an existing task so that I can modify its details.
+
+**Acceptance Criteria:**
+- User can specify which task to update by ID
+- User can update the title of the task
+- User can update the description of the task
+- System validates that the task exists before updating
+- System confirms successful update of the task
+
+### 4. Delete Task
+As a user, I want to remove a task from my list so that I can clean up completed or irrelevant tasks.
+
+**Acceptance Criteria:**
+- User can specify which task to delete by ID
+- System validates that the task exists before deletion
+- System removes the task from memory
+- System confirms successful deletion of the task
+
+### 5. Mark Task Complete/Incomplete
+As a user, I want to mark a task as complete or incomplete so that I can track my progress.
+
+**Acceptance Criteria:**
+- User can specify which task to mark by ID
+- User can toggle the completion status of the task
+- System validates that the task exists before updating status
+- System confirms successful status change
+
+## Functional Requirements
+
+### F-1: Task Management
+- The system shall support creating, reading, updating, and deleting tasks
+- Each task shall have a unique identifier
+- Each task shall have a title (required)
+- Each task shall have an optional description
+- Each task shall have a completion status (boolean)
+
+### F-2: User Interface
+- The system shall provide a menu-driven command-line interface
+- The system shall display clear options for available actions
+- The system shall provide feedback for all user actions
+- The system shall handle invalid input gracefully
+
+### F-3: Data Management
+- The system shall store all tasks in memory only
+- The system shall not persist data beyond the application lifecycle
+- The system shall maintain data integrity during all operations
+
+## Non-Functional Requirements
+
+### NFR-1: Usability
+- The system shall provide clear prompts and instructions
+- The system shall display error messages in human-readable format
+- The system shall be intuitive for users familiar with command-line interfaces
+
+### NFR-2: Reliability
+- The system shall handle invalid user input without crashing
+- The system shall validate user input before processing
+- The system shall maintain consistent state during operation
+
+### NFR-3: Performance
+- The system shall respond to user commands within 1 second
+- The system shall handle at least 1000 tasks in memory without performance degradation
+
+## Constraints
+- The application must run in a console/terminal environment
+- The application must use only Python standard library
+- The application must not store data persistently
+- The application must not connect to external services or networks
+
+## Assumptions
+- The user has basic familiarity with command-line interfaces
+- The user has Python 3.13+ installed on their system
+- The application will run on a system with sufficient memory to store tasks
+
+## Dependencies
+- Python 3.13+ runtime environment
+- Console/terminal access

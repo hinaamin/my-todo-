@@ -1,0 +1,56 @@
+# Constitution: Todo Console Application
+
+## Purpose
+This document establishes the foundational principles and constraints for the Todo Console Application as part of Hackathon II: Spec-Driven Development.
+
+## Core Principles
+
+### 1. Spec-Driven Development Mandate
+- All code must be generated through the Spec-Driven Development (SDD) process
+- No manual coding is permitted
+- Every implementation must map to a validated specification, plan, and task
+
+### 2. Architecture Constraints
+- Console-only application (no GUI, web interface, or network dependencies)
+- In-memory data storage only (no files, databases, or external persistence)
+- Single-threaded execution model
+- Pure Python implementation using standard library only
+
+### 3. Data Model
+- Tasks stored in memory as simple objects/dictionaries
+- Each task has: id (integer), title (string), description (string, optional), completed (boolean)
+- Data is ephemeral - lost when application terminates
+
+### 4. User Experience
+- Clear, intuitive command-line interface
+- Menu-driven navigation
+- Human-readable prompts and responses
+- Graceful error handling with informative messages
+
+### 5. Code Quality Standards
+- Clean, readable Python code following PEP 8 standards
+- Proper separation of concerns (UI, business logic, data management)
+- Comprehensive error handling
+- Minimal dependencies (standard library only)
+
+### 6. Development Process
+- Strict adherence to SDD workflow: Specify → Plan → Tasks → Implement
+- Each code change must reference a specific task ID
+- All architectural decisions must be documented in the plan
+- All requirements must be captured in the specification
+
+## Non-Negotiable Constraints
+- No external dependencies beyond Python standard library
+- No file or database I/O
+- No network connectivity
+- No third-party packages
+- No persistence beyond runtime memory
+- No GUI or web interface
+- No multithreading or multiprocessing
+
+## Success Criteria
+- Application implements all Basic Level features (Add, View, Update, Delete, Mark Complete)
+- Code follows clean architecture principles
+- Implementation matches specification exactly
+- Application is robust and handles invalid input gracefully
+- All SDD artifacts are properly maintained
